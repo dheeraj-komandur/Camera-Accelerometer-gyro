@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dheeraj.accgyrocam.MainActivity">
+
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/text"
+        android:text="Camera Detection"
+        android:textSize="17sp"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="358dp"
+        android:layout_below="@+id/text"
+        android:orientation="vertical">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/startBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@android:color/transparent"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/showPermissionMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="20sp"
+            android:text="@string/permission_message"
+            android:textAlignment="center"
+            android:textStyle="bold|italic"
+            android:visibility="gone" />
+    </FrameLayout>
+    <TextView
+        android:layout_below="@+id/framelayout"
+        android:id="@+id/text1"
+        android:gravity="center"
+        android:text="Accelerometer + Gyroscope Detection"
+        android:textSize="17sp"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart1"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:layout_below="@+id/text1"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+</RelativeLayout>
